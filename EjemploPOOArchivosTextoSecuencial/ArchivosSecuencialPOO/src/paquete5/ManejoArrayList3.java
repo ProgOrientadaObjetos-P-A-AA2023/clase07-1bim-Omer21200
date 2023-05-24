@@ -15,7 +15,7 @@ import paquete1.Profesor;
  */
 public class ManejoArrayList3 {
     public static void main(String[] args) {
-        
+         double promedio=0;
         Calificacion c1 = new Calificacion(10, "Base de Datos");
         Calificacion c2 = new Calificacion(9, "Matemáticas");
         Calificacion c3 = new Calificacion(7, "Lógica");
@@ -40,7 +40,10 @@ public class ManejoArrayList3 {
                     calificaciones.get(i).obtenerProfesor().obtenerNombre(), 
                     calificaciones.get(i).obtenerNombreMateria(),
                     calificaciones.get(i).obtenerNota());
+            promedio=promedio+calificaciones.get(i).obtenerNota();
         }
+        promedio=promedio/calificaciones.size();
+        System.out.printf("El promedio de clificaciones es: %.1f\n",promedio);
         
         
     }
